@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-const Dropdown = () => {
+interface DropProps{
+  title: String;
+}
+const Dropdown = ({title}: DropProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
   
@@ -26,7 +29,7 @@ const Dropdown = () => {
             type="button"
             className={`inline-flex justify-center w-full px-4 py-2 text-sm font-medium ${isHovered ? 'text-blue-400' : 'text-gray-700'} `}
           >
-            Opções
+            {title}
             {isOpen ? (
               <IoMdArrowDropup className="w-5 h-5 ml-2" />
             ) : (
