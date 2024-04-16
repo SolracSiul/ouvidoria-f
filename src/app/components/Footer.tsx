@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <div className='bg-[#F2F2F2] pt-6'>   
-    <div className='containter mx-auto md:max-w-[1400px] flex flex-col md:grid md:grid-cols-5'>
+    <div className='containter pl-4  mx-auto md:max-w-[1400px] flex flex-col md:grid md:grid-cols-5'>
       <List names={wordsArray} title="Institutional"/>
       <List names={unifacisaData} title="unifacisaData"/>
       <List names={studyAtUnifacisaData} title="Study at Unifacisa"/>

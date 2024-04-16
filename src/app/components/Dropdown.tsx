@@ -1,54 +1,34 @@
 "use client"
 import React, { useState } from 'react';
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import Icon from './Icon';
 
-interface DropProps{
-  title: String;
+interface DropProps {
+  title: string; // Troquei String para string para manter consistência
 }
-const Dropdown = ({title}: DropProps) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
-  
-    const handleMouseEnter = () => {
-      setIsOpen(true);
-      setIsHovered(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setIsOpen(false);
-      setIsHovered(false);
-    };
-  
-    return (
-      <div className="relative inline-block text-left">
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <button
-            type="button"
-            className={`inline-flex justify-center w-full px-4 py-2 text-sm font-medium ${isHovered ? 'text-blue-400' : 'text-gray-700'} `}
-          >
-            {title}
-            {isOpen ? (
-              <IoMdArrowDropup className="w-5 h-5 ml-2" />
-            ) : (
-              <IoMdArrowDropdown className="w-5 h-5 ml-2" />
-            )}
-          </button>
-        </div>
-  
-        {isOpen && (
-          <div className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg">
-            <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Item 1</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Item 2</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Item 3</a>
-            </div>
-          </div>
-        )}
+
+interface DropProps {
+  title: string;
+  isOpen: boolean; 
+  toggleDropDown: () => void; 
+  words: string[];
+  onMouseLeave: () => void;
+}
+
+const Dropdown = ({ title, isOpen, onMouseLeave , toggleDropDown, words }: DropProps) => {
+  return (
+    <div className='relative' onMouseLeave={onMouseLeave}>
+      <div onClick={toggleDropDown} className='px-2 pt-2 flex items-center gap-2 cursor-pointer'>
+        <h1 className='text-[#3046be]'>{title}</h1>
+        <Icon/>
       </div>
-    );
-  };
-  
-  export default Dropdown;
+      {isOpen && (
+        <div className='absolute z-50 right-[5px] top-[30px] w-[200px] bg-[#f4f4f4] p-2 flex flex-col gap-2 rounded-b-md' id='dropdown'>
+          {words.map((word, index) => (
+            <div key={index} className='p-1 cursor-pointer hover:bg-gray-300'>{word}</div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+export default Dropdown;

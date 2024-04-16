@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from './Button';
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaFolder } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 
 function Infos() {
   return (
@@ -16,45 +19,46 @@ function Infos() {
                 Explore more options
                 </button>
             </div>
-            <div className=' w-3/4 flex flex-col items-center justify-center lg:grid lg:grid-cols-2 gap-2 ml-8'>
-                <div className='bg-[#d3dbe5a8] w-[420px] h-[150px] flex gap-[18px] rounded-md'>
+            <div className=' w-3/4 flex flex-col items-center justify-center lg:grid lg:grid-cols-2 gap-4 ml-8'>
+            <div className='bg-[#D3DBE5] hover:bg-[#d3dbe5b6] w-[390px] h-[170px] flex gap-6 rounded-md cursor-pointer'>
                     <div className='pl-8 py-4 flex items-center justify-center'>
-                        <AiOutlineWhatsApp size={52} color='green' />
+                        <AiOutlineWhatsApp size={36} color='blue'  />
                     </div>
                     <div className='flex flex-col p-4 gap-2'>
-                        <h1 className='font-bold text-[32px] text-blue-800'>WhatsApp</h1>
+                        <h1 className='font-bold text-[22px] text-blue-800'>WhatsApp</h1>
                         <span>83 8105-4461</span>
-                        <Button title='Chat' color='blue-300' width={120} textColor='white'/>
+                        <button className='w-[140px] bg-blue-400 text-white rounded-md p-2'>Chat</button>
                     </div>
                 </div>
-                <div className='bg-[#D3DBE5] w-[420px] h-[150px] flex gap-6 rounded-md'>
+                <div className='bg-[#D3DBE5] hover:bg-[#d3dbe5b6] w-[390px] h-[170px] flex gap-6 rounded-md cursor-pointer'>
                     <div className='pl-8 py-4 flex items-center justify-center'>
-                        <AiOutlineWhatsApp size={52} color='green' />
+                        <FaPhoneAlt size={36} color='blue' /> 
                     </div>
                     <div className='flex flex-col p-4 gap-2'>
-                        <h1 className='font-bold text-[32px] text-blue-800'>WhatsApp</h1>
-                        <span>83 8105-4461</span>
-                        <Button title='Chat' color='blue-300' width={120} textColor='white'/>
+                        <h1 className='font-bold text-[22px] text-blue-800'>Call</h1>
+                        <span>83 2101 8877</span>
+                        <button className='w-[140px] bg-blue-400 text-white rounded-md p-2'>Call Now</button>
                     </div>
                 </div>
-                <div className='bg-[#D3DBE5] w-[420px] h-[150px] flex gap-6 rounded-md'>
+                <div className='bg-[#D3DBE5] hover:bg-[#d3dbe5b6] w-[390px] h-[170px] flex gap-6 rounded-md cursor-pointer'>
                     <div className='pl-8 py-4 flex items-center justify-center'>
-                        <AiOutlineWhatsApp size={52} color='green' />
+                    <FaFolder size={36} color='blue'/>
                     </div>
                     <div className='flex flex-col p-4 gap-2'>
-                        <h1 className='font-bold text-[32px] text-blue-800'>WhatsApp</h1>
-                        <span>83 8105-4461</span>
-                        <Button title='Chat' color='blue-300' width={120} textColor='white'/>
+                        <h1 className='font-bold text-[22px] text-blue-800'>Academic Repository</h1>
+                        <span>Notices, portals, resolutions, and other documents </span>
+                        <button className='w-[140px] bg-blue-400 text-white rounded-md p-2'>Access Now</button>
                     </div>
                 </div>
-                <div className='bg-[#D3DBE5] w-[420px] h-[150px] flex gap-6 rounded-md'>
+                <div className='bg-[#D3DBE5] hover:bg-[#d3dbe5b6] w-[390px] h-[170px] flex gap-6 rounded-md cursor-pointer'>
                     <div className='pl-8 py-4 flex items-center justify-center'>
-                        <AiOutlineWhatsApp size={52} color='green' />
+                    <FaUserAlt  size={36} color='blue'/>
                     </div>
                     <div className='flex flex-col p-4 gap-2'>
-                        <h1 className='font-bold text-[32px] text-blue-800'>WhatsApp</h1>
-                        <span>83 8105-4461</span>
-                        <Button title='Chat' color='blue-300' width={120} textColor='white'/>
+                        <h1 className='font-bold text-[22px] text-blue-800'>I'm unifacisa</h1>
+                        <span>Access to main environments for students and collaborators</span>
+                        
+                        <button className='w-[140px] bg-blue-400 text-white rounded-md p-2'>Access Now</button>
                     </div>
                 </div>
             </div>

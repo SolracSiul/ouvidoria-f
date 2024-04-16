@@ -41,7 +41,7 @@ function Form() {
   return (
     <div className='h-[1250px] md:h-[1140px] mt-8 mb-6'>
       <div className=''>
-        <div className="h-[352px] relative bg-cover bg-center md:bg-top" style={{ backgroundImage: "url('/images/background.jpg')", backgroundPosition: "center" }}>
+        <div className="h-[352px] z-10 relative bg-cover bg-center md:bg-top" style={{ backgroundImage: "url('/images/background.jpg')", backgroundPosition: "center" }}>
           <div className='absolute bottom-[-22px] left-1/2 transform -translate-x-1/2 '>
             <div className='h-[85px] w-[90vw] bg-[#f4f4f4] md:max-w-[1400px] rounded-md ' >
               <h1 className='text-[44px] text-[#01347c] font-semibold pl-4 pt-2'>Ombudsman</h1>
