@@ -1,10 +1,12 @@
+/* eslint-disable no-use-before-define */
+
 import React from 'react';
 import Button from './Button';
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFolder } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-
+/* eslint-disable no-use-before-define */
 function Infos() {
   return (
     <div className='bg-[#f8f8f8] py-[66px]'>
